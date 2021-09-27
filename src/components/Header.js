@@ -4,7 +4,7 @@ import { Container, Row, Col, Nav, NavItem } from "reactstrap";
 import { Link } from "react-router-dom";
 
 // Routes
-import { ANI_URL, TODO_URL } from "./routes";
+import { ANI_URL, TODO_URL } from "../routes/routes";
 
 const Layout = (props) => {
 	return (

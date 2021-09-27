@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch, Redirect } from "react-router";
-import { TodoComponent, AniComponent } from "./components";
+import { TodoComponent, AniComponent, AnimeComponent } from "./components";
 
 export default function routes(props) {
 	return (
@@ -11,13 +11,16 @@ export default function routes(props) {
 				isActive={() => true}
 				path={TODO_URL}
 				component={TodoComponent}
-			></Route>
+			/>
 
-			<Route path={ANI_URL} component={AniComponent}></Route>
+			<Route exact path={ANI_URL} component={AniComponent} />
+
+			<Route exact path={ANIME_URL} component={AnimeComponent} />
 		</Switch>
 	);
 }
 
 export const TODO_URL = "/todo-app";
-export const ANI_URL = "/ani-api";
+export const ANI_URL = "/animes";
+export const ANIME_URL = "/animes/:id";
 export const HOME_URL = "/";
