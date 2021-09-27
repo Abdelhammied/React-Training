@@ -1,12 +1,20 @@
-import "./App.css";
-import TodoApp from "./Todo/Index";
+// Packages and apis
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 
-function App() {
+// Components
+import Header from "./Header";
+import Routes from "./routes";
+
+// Css
+import "./App.css";
+
+export default function App() {
 	return (
-		<div>
-			<TodoApp />
-		</div>
+		<Router>
+			<Header />
+
+			<Routes />
+		</Router>
 	);
 }
-
-export default App;
